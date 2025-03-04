@@ -4,20 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DT Draw</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Lucky Draw</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="staff-login.html">Staff Login</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-
-    <h1>Welcome to DT Draw</h1>
-    <p>Your lucky draw platform.</p>
+    <div class="container">
+        <h1>Welcome to Lucky Draw!</h1>
+        <input type="text" id="name" placeholder="Enter your name">
+        <input type="text" id="phone" placeholder="Enter your phone number">
+        <button onclick="startDraw()">Start Draw</button>
+        <p id="result"></p>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
